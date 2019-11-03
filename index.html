@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <title> Qualium Systems Javascript test task </title>
+    <style>
+      canvas {
+        background: black;
+      }
+      .hide {
+        display: none;
+      }
+
+      .page-wrapper {
+        width: 640px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0 auto;
+      }
+      .canvas-wrapper, .buttons-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+        align-items: center;
+      }
+
+      .buttons-wrapper {
+        justify-content: space-between;
+      }
+      button {
+        border: none;
+        padding: 10px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 7px;
+        background-color: #34b4eb;
+        color: #fff;
+        box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.5);
+      }
+
+      .stopBtn {
+        background-color: #eb3434;
+      }
+
+      button:hover {
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+      }
+
+      span {
+        font-size: 25px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h2>JS Snake</h2>
+        <div class="buttons-wrapper">
+          <button  OnClick="controller.start();" class="strBtn"> Start </button>
+          <button OnClick="controller.stop();" class="stopBtn hide"> Stop </button>
+          <span> Score: <span id="score"> 0 </span> </span>
+        </div>
+        <div class="canvas-wrapper">
+            <canvas width="640" height="480" id="canvas"></canvas>
+        </div>
+    </div>
+    
+  </body>
+
+  <script type="text/javascript" src="canvas.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+</html>
